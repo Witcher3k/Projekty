@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#scena{
+    position: absolute;
+    z-index: -1000;
+    width: 100vw;
+    height: 100vh;
+    background:url(HD-Sound-Wave-Wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+   
+}
+#dark{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 2;
+    transition:all 2s ease;
+}
+#button{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 100px solid #1AFF00;
+    z-index: 3;
+    border-radius: 50%;
+    box-sizing: border-box;
+    top:  50px;
+    left: 15%;
+    animation: switchOff 600ms linear infinite alternate;
+}
+#button:hover{
+    animation: none;
+}
+
+#button:hover+#dark{
+    background-color: transparent;
+
+}
+@keyframes switchOff{
+    0%{border:0px solid #1AFF00;
+       opacity:0; 
+    }
+    
+    100{border:100px solid #1AFF00;
+        opacity:0;
+    }
+}
