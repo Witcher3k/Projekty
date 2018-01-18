@@ -1,0 +1,223 @@
+body {
+    font-family: Courier New, sans-serif, Arial;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Global*/
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #404040;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 5px solid rgb(248, 16, 43);
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button1 {
+    height: 38px;
+    background: rgb(248, 16, 43);
+    border: none;
+    padding: 4px;
+    color: white;
+    margin: 4px;
+    float: right;
+    font-family: Courier New;
+    width: 302px;
+    box-sizing: content-box;
+}
+
+.dark {
+    padding: 15px;
+    background-color: #404040;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*header*/
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 16px 0 16px;
+    letter-spacing: 4px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+    color: rgb(248, 16, 43);
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ccc;
+    font-weight: bold;
+}
+
+
+/*show case */
+
+#showcase {
+    min-height: 500px;
+    background: url('../img/background.jpg') no-repeat center;
+    text-align: center;
+    color: white;
+}
+
+#showcase h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+#showcase p {
+    margin-top: 340px;
+    font-size: 22px;
+}
+
+#email {
+    padding: 15px;
+    border-bottom: 5px solid rgb(248, 16, 43);
+    /* border-top: 5px solid rgb(248, 16, 43); */
+    color: white;
+}
+
+#email h1 {
+    float: left;
+    font-size: 50px;
+}
+
+#email form {
+    float: right;
+    margin-top: 15px;
+}
+
+#email input[type="email"] {
+    display: block;
+    padding: 4px;
+    height: 25px;
+    width: 300px;
+    margin: 4px;
+    border: 1px solid black;
+}
+
+#email textarea {
+    resize: none;
+    display: block;
+    padding: 4px;
+    height: 150px;
+    width: 300px;
+    margin: 4px;
+    border: 1px solid black;
+}
+
+#email .container {
+    width: 70%;
+}
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center
+}
+
+#boxes .box img {
+    width: 120px;
+}
+
+#boxes h3 {
+    text-align: center;
+    font-size: 17px;
+}
+
+footer {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(248, 16, 43);
+    color: white;
+    text-align: center;
+}
+
+
+/*about page*/
+
+#main {
+    font-size: 17px;
+}
+
+aside#sidebar {
+    float: right;
+    width: 30%;
+}
+
+article#main-col {
+    float: left;
+    width: 65%;
+}
+
+
+/*projects*/
+
+ul#projects li {
+    list-style: none;
+    padding: 20px;
+    border: #ccc solid 2px;
+    margin-bottom: 4px;
+}
+
+.dark .button1 {
+    width: 70%;
+    float: left;
+    border: none;
+    margin: 5px;
+}
+
+aside#sidebar .quote input[type="email"],
+aside#sidebar .quote textarea {
+    padding: 5px;
+    margin: 5px;
+    width: 90%;
+    border: 1px solid black;
+    resize: none;
+}
