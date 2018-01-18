@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+header {
+     height: 100vh;
+    width: 100vw;
+    background: url(img/maxresdefault.jpg) left top, no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+main {
+    height: 100vh;
+    width: 80vw;
+    background: #131D1C;
+    background-repeat: no-repeat;
+    margin-top: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    opacity: 0.6;
+}
+
+header nav {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    font-size: 3rem;
+}
+
+header hgroup {
+    position: absolute;
+    left: 3%;
+    top: 2%;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    transition: 1s ease;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    text-shadow: 2px 2px 8px black;
+}
+
+header h3 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 8px v;
+}
+
+#arrow {
+    width: 65px;
+    height: 65px;
+    border: 3px solid black;
+    /*box-shadow: 0px 0px 2px black*/
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    font-size: 5rem;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0px 0px 0px black, 0px 15px 0px black, 0px -15px 0px black;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+#arrow:hover {
+    text-shadow: 0px 0px 1px #F8ECBC, 0px 15px 1px #F8ECBC, 0px -15px 1px #F8ECBC;
+    border-color: #F8ECBC;
+    box-shadow: 0px -65px 2px #F8ECBC;
+    cursor: pointer;
+}
+
+.toggleArrow {
+    animation: arrow 1.5s infinite linear;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate(0px);
+    }
+    50% {
+        transform: translateY(80px);
+    }
+    50.001% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+
+/* @media(max-height:600px) and (max-width:600px) {
+    header hgroup {
+        left: 0.5%;
+    }
+    h1 {
+        text-align: left;
+    }
+    h1 #of_Warriors::before {
+        content: '\A';
+        white-space: pre;
+    }
+    h3 {
+        text-align: left;
+    }
+}
+*/
+
+@media(orientation:portrait) {
+    h3 span::after {
+        content: '\A';
+        white-space: pre;
+    }
+    main {
+        width: 100vw;
+    }
+}
+
+@media(orientation:landscape) {
+    header hgroup {
+        left: 60%;
+    }
+    header nav {
+        right: 0;
+        left: 2%;
+    }
+    #arrow {
+        left: 60%;
+        transform: translate(0);
+    }
+}
+
+@media(max-width:320px) {
+    h1 #of_Warriors::before {
+        content: '\A';
+        white-space: pre;
+    }
+    header h3 {
+        font-size: 1.3rem;
+    }
+    #arrow {
+        bottom: 20%;
+    }
+}

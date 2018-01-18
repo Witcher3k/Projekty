@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+#showcase {
+    background-image: url("bg.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#showcase h1 {
+    font-size: 70px;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+#showcase .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: #eee;
+    border: #eee 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+#showcase .button:hover {
+    background: #eee;
+    color: black;
+}
+
+section {
+    color: black;
+    padding: 10px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+section p {
+    margin-top: 5px;
+}
+
+.section-a h2 {
+    border-bottom: 1.5px solid dimgray;
+}
+
+.section-b {
+    background-color: whitesmoke;
+    display: flex;
+    text-align: justify;
+}
+
+.section-b p {
+    padding: 10px;
+}
+
+.section-b p:nth-of-type(1) {
+    border-right: 3px solid wheat;
+}
+
+@media (max-width:680px) and (orientation: landscape) {
+    #showcase {
+        background-position: right;
+    }
+}
+
+@media (max-width:1400px) {
+    #showcase {
+        background-position: left;
+    }
+    #showcase h1 {
+        font-size: 50px;
+    }
+}
