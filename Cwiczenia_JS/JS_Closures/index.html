@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+
+	</body>
+	
+	<script>
+        //closures Domknięcia to funkcje których funkcje wewnętrzne odwołują się do niezależnych (wolnych) zmiennych. Innymi słowy, funkcje zdeklarowane wewnątrz domknięcia 'pamiętają' środowisko w którym zostały utworzone.
+        
+        
+        //Przykład z return prawie jak closures podobna zasada
+     function example(){
+         const insideVar="zmienna stworzona w funkcji";
+         const insideVar2="zmienna 2 stworzone w funkcji";
+         return [insideVar,insideVar2];
+     }    
+        let outsideVar=example();
+        console.log(outsideVar);
+        
+        //Przykład 2 zakresy
+        
+        let userAge = 23;
+        
+        const userInfo=function(){
+            const userName="Adam";
+            return "Imie:"+userName+"Wiek:"+userAge;
+        }
+        
+        const newUser=userInfo();
+        console.log(newUser);
+        
+        //Przykład 3 
+        
+        function hello(name){
+            return function (day){
+               console.log(`Cześć ${name}, jak tam ${day} u Ciebie?`);
+            }
+        }
+        
+        const user=hello("Kamil");
+        console.log(user);
+        console.log(user("środa"));
+        
+        
+        //Przykład 4
+        
+        const dodaj = function(a){
+            let b =10;
+            return function(c){
+                return a+b+c;
+            }
+        }
+        
+        const dodaj20 = dodaj(20);
+        console.log(dodaj20);
+        console.log(dodaj20(20));
+        
+        //Przykład 5 licznik
+        
+        function licznik(start){
+            let liczbaWywolan = start;
+            
+            return function(){
+                return ++liczbaWywolan;
+            }
+        }
+        
+        const count= licznik(0);
+        count();
+        count();
+        count();
+        
+        console.log(count());
+        
+    </script>
+    
+</html>

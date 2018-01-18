@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    /*
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    */
+    grid-gap: 1em;
+}
+
+.wrapper > div {
+    background: rgb(182, 179, 179);
+    padding: 1em;
+}
+
+.wrapper > div:nth-child(odd) {
+    background: rgb(122, 121, 121);
+}
+
+article p {
+    background-color: red;
+    width: 80%;
+}
+
+aside {
+    background-color: yellow;
+    width: 20%;
+    float: right;
+
+}
+
+aside,
+ul {
+    padding-left: 15px;
+}
+
+@media (max-width:568px) {
+
+    aside {
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+    article p {
+        width: 100%;
+    }
+}
